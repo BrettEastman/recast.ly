@@ -14,6 +14,7 @@ const App = () => {
       setCurrentVideo(results[0]);
     });
   };
+
   React.useEffect(() => searchYT('cats'), []); // searches when pages loads, then empty arr makes sure it only runs once
 
   return (
