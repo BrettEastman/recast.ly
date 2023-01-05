@@ -5,12 +5,12 @@ import Search from './Search.js';
 import searchYouTube from '../lib/searchYouTube.js';
 
 const App = () => {
-  const [videoList, setVideoList] = React.useState([]);
+  const [vList, setVList] = React.useState([]);
   const [currentVideo, setCurrentVideo] = React.useState(exampleVideoData[0]);
 
   const searchYT = function(query) {
     searchYouTube(query, (results) => {
-      setVideoList(results);
+      setVList(results);
       setCurrentVideo(results[0]);
     });
   };
@@ -29,7 +29,7 @@ const App = () => {
           <div><VideoPlayer video={currentVideo}/></div>
         </div>
         <div className="col-md-5">
-          <VideoList videos={videoList} handleClick={setCurrentVideo}/>
+          <VideoList videos={vList} manageClick={setCurrentVideo}/>
         </div>
       </div>
     </div>

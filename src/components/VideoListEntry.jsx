@@ -1,4 +1,3 @@
-
 var VideoListEntry = ({ video, handleClick }) => (
   <div className="video-list-entry media">
     <div className="media-left media-middle">

@@ -1,13 +1,13 @@
 var debounce;
 var Search = ({handleChange}) => {
-  const [query, setQuery] = React.useState('');
+  const [getQuery, setGetQuery] = React.useState('');
 
   return (
     <div className="search-bar form-inline">
-      <input className="form-control" type="text" value={query} onChange={(event) => {
-        setQuery(event.target.value);
+      <input className="form-control" type="text" value={getQuery} onChange={(event) => {
+        setGetQuery(event.target.value);
         clearTimeout(debounce);
-        debounce = setTimeout(() => handleChange(query, 500));
+        debounce = setTimeout(() => handleChange(getQuery, 500));
       }}/>
       <button className="btn hidden-sm-down">
         <span className="glyphicon glyphicon-search"></span>
